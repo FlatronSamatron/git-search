@@ -1,0 +1,40 @@
+.search-panel{
+  text-align: center;
+  border:2px solid #ececec;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.search-panel h1{
+  margin-bottom: 20px;
+}
+
+.avatar{
+  height: 100px;
+  width: 100px;
+}
+
+.user-info-img{
+  height: 300px;
+  width: 300px;
+}
+
+td, th{
+  vertical-align: middle !important;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer
+}
+
+
+@media(max-width: 450px) {
+  .avatar{
+    height: 50px;
+    width: 50px;
+  }
+  td, th{
+    font-size: 15px;
+  }
+}
