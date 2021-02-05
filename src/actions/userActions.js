@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const token = 'e1f982f3dd0f30c50028d47f0565249c8e0684c2'
+const token = '&access_token=e1f982f3dd0f30c50028d47f0565249c8e0684c2'
 
 export const userList = (search) => async (dispatch) => {
     try{
@@ -16,7 +16,7 @@ export const userList = (search) => async (dispatch) => {
 
 
         const countRepo = data.items.map( async (el) => {
-            const {data} = await axios.get(`https://api.github.com/users/${el.login}?access_token=${token}`)
+            const {data} = await axios.get(`https://api.github.com/users/${el.login}`)
             el.public_repos = data.public_repos
         })
         
@@ -38,7 +38,7 @@ export const userList = (search) => async (dispatch) => {
 
 export const userInfo = (login) => async (dispatch) => {
     try{
-        const {data} = await axios.get(`https://api.github.com/users/${login}?access_token=${token}`)
+        const {data} = await axios.get(`https://api.github.com/users/${login}`)
         
         dispatch({ type : 'user_info_request' })
 
@@ -57,7 +57,7 @@ export const userInfo = (login) => async (dispatch) => {
 
 export const userRepo = (login) => async (dispatch) => {
     try{
-        const {data} = await axios.get(`https://api.github.com/users/${login}/repos?per_page=100&access_token=${token}`)
+        const {data} = await axios.get(`https://api.github.com/users/${login}/repos?per_page=100`)
         
         dispatch({ type : 'user_repo_request' })
 
