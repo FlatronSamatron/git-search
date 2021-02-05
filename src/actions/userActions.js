@@ -5,7 +5,7 @@ const token = '&access_token=e1f982f3dd0f30c50028d47f0565249c8e0684c2'
 export const userList = (search) => async (dispatch) => {
     try{
         if(search){
-            const {data} = await axios.get(`https://api.github.com/search/users?q=${search}&access_token=${token}`)
+            const {data} = await axios.get(`https://api.github.com/search/users?q=${search}`)
         
 
 
