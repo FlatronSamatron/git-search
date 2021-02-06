@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const token = '&access_token=e1f982f3dd0f30c50028d47f0565249c8e0684c2'
+// const token = '&access_token=e1f982f3dd0f30c50028d47f0565249c8e0684c2'
 
 export const userList = (search) => async (dispatch) => {
     try{
